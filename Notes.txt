@@ -104,7 +104,7 @@ v) Sticky - using top:0 once reach the top:0 it will act as a same fixed
    Ex: Navbar, cards                 Ex: Section, Dashboard
 
 ======> Flex ---------------
-i) Using Display:flex (Column into row)   
+i) Using Display:flex; (Column into row)   
 ii) Flex direction - Row, row-reverse, Column, column-reverse
 iii) Justify-content (X) - Start, end, center, space-Around, space-evenly, space-between
 iv) Align-items (Y) - (Set the height) - Start, center, end
@@ -113,3 +113,29 @@ vi) Flex-wrap - nowrap, wrap, wrap-reverse
 vii) Align-content (Y) - (Set the height) - (Enable the wrap) - Start, end, center, space-Around, space-evenly, space-between
 viii) Flex on items - Flex: 1, 2, 3
 ix) Order - Change the visual order of the property
+
+=======> Grid ---------------
+i) Using Display:grid; (No change)
+ii) grid-template-columns: 300px 400px 500px;
+                         : 30% 40% 30%;
+                         : 1fr 1fr 1fr;
+                         : 200px 30% 1fr;
+                         : repeat(4,300px);
+                         : minmax(200px,1fr) 1fr 1fr;
+                         : repeat(3,minmax(200px,1fr)); 
+iii) grid-template-rows: 300px 400px 500px;
+                       : 30% 40% 30%;
+                         : 1fr 1fr 1fr;
+                         : 200px 30% 1fr;
+                         : repeat(4,300px);     
+iv) grid-column-start: 1; (starting value)
+    grid-column-end: 4; (Ending value)   
+    grid-column: span 3;
+v)    grid-row-start: 1; (starting value)
+      grid-row-end: 4; (Ending value)   
+      grid-row: span 3; 
+vi) grid-template-areas: 
+    "h h h h"
+    "sb1 m m sb2"
+    "f f f f";
+    we can use Grid-area to call the name

@@ -47,14 +47,14 @@ h1{
     color: blue;
 } */
 
-p{
+/* p{
     background-image: url(./Assets/images.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: beige;
     opacity: 20;
-}
+} */
 
 .Container{
     width: 200px;
@@ -187,4 +187,82 @@ span{
     width: 200px;
     height: 100px;
     background-color: hotpink;
+}
+
+.Grid-Container{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(200px,1fr));
+    /* grid-template-rows: repeat(3,500px); */
+}
+
+.para{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+}
+
+.items{
+    background-color: green;
+    font-size: 50px;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.outerbox{
+    display: grid;
+    margin: 20px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.item1{
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: span 3;
+}
+
+.item2{
+    grid-row: span 3;
+}
+
+.layout > div{
+    border: 1px solid black;
+    background-color: #ebabac;
+    font-size: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.layout{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+    "z z z z"
+    "sb1 m m sb2"
+    "q q q q";
+}
+
+.header{
+    grid-area: z;
+}
+
+.footer{
+    grid-area: q;
+}
+
+.sidebar1{
+    grid-area: sb1;
+}
+
+.sidebar2{
+    grid-area: sb2;
+}
+
+.main{
+    grid-area: m;
 }
